@@ -1,0 +1,15 @@
+
+duckdb
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+xgboost
+mlflow
+fastapi
+uvicorn
+streamlit
+pytest
+matplotlib
+seaborn
