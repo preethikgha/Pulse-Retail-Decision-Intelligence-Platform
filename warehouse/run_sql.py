@@ -11,7 +11,9 @@ con.execute(f"CREATE SCHEMA IF NOT EXISTS {folder};")
 
 for f in sorted((ROOT / "warehouse" / folder).glob("*.sql")):
     con.execute(f.read_text(encoding="utf-8"))
-    n = con.execute(f"SELECT COUNT(*) FROM {folder}.{f.stem}").fetchone()[0]
-    print(f"{folder}.{f.stem}: {n:,} rows")
+    # files named 01_name.sql run in order; table is called "name"
+    table = f.stem.split("_", 1)[1] if f.stem[:2].isdigit() else f.stem
+    n = con.execute(f"SELECT COUNT(*) FROM {folder}.{table}").fetchone()[0]
+    print(f"{folder}.{table}: {n:,} rows")
 
 con.close()
