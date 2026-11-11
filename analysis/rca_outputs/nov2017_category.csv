@@ -1,0 +1,9 @@
+seg,spike_rows,spike_late,base_rate,spike_rate,excess_late,pct_of_excess
+bed_bath_table,961,202,0.037,0.21,167.0,20.8
+furniture_decor,767,132,0.049,0.172,94.0,11.7
+garden_tools,547,74,0.039,0.135,53.0,6.6
+toys,485,60,0.04,0.124,41.0,5.1
+sports_leisure,597,63,0.04,0.106,39.0,4.9
+watches_gifts,463,60,0.047,0.13,38.0,4.8
+health_beauty,573,71,0.065,0.124,34.0,4.2
+housewares,412,47,0.036,0.114,32.0,4.0
