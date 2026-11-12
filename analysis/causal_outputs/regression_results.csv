@@ -1,0 +1,6 @@
+model,n,late_effect,std_err,ci_low,ci_high
+M1 naive,95561,-1.73,0.019,-1.767,-1.692
+M2 + order controls,95561,-1.765,0.019,-1.802,-1.727
+M3 + state and month FE,95561,-1.713,0.019,-1.751,-1.675
+"M4 single-item orders + category, seller state",86062,-1.749,0.02,-1.789,-1.709
+M5 outcome: review <= 2 (prob. change),95561,0.446,0.006,0.435,0.457
