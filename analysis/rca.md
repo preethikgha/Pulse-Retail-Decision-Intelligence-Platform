@@ -19,7 +19,7 @@ Why did the late-delivery rate jump in Nov 2017 (14.3%) and Feb-Mar 2018 (16.0%,
 - Customers in RJ: 28.1% late (baseline 4.9%), about 33% of the excess from about 14% of orders.
 - Cross-state shipments: 66% of items but 83% of the excess (16.5% late vs 8.6% same-state).
 - bed_bath_table: 21.0% late, about 21% of the excess from about 11% of items.
-- Some sellers were far above normal (28-53% late). The top 8 sellers explain about 40% of the excess among sellers with enough history, so part of the spike is seller-specific.
+- Six of the eight largest seller contributors ran 27-53% late, against seller baselines under 5%. The top 8 sellers explain about 40% of the excess among sellers with enough history, so part of the spike is seller-specific.
 
 ## Finding 2: Feb-Mar 2018, a broad transit-leg slowdown
 - Late rate 16.0% (Feb) and 21.4% (Mar). Carrier leg 13.4 and 13.0 days vs about 8.5 in normal months.
