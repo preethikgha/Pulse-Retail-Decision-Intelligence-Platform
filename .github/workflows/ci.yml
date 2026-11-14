@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          pip install -r api/requirements.txt
+          pip install pytest httpx
+
+      - name: Run API tests
+        run: python -m pytest tests/test_api.py -q
+
+      - name: Build Docker image
+        run: docker build -f api/Dockerfile -t pulse-api .
+
+      - name: Smoke test the container
+        run: |
+          docker run -d -p 8080:8080 --name pulse pulse-api
+          for i in $(seq 1 20); do
+            curl -fs http://localhost:8080/health && break
+            sleep 2
+          done
+          curl -fs http://localhost:8080/health
+          docker logs pulse
