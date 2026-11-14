@@ -96,7 +96,7 @@ for name, kind, params in RUNS:
         m.update(metrics(yva, pipe.predict_proba(Xva)[:, 1], "val"))
         m.update(metrics(yte, pipe.predict_proba(Xte)[:, 1], "test"))
         mlflow.log_metrics(m)
-        mlflow.sklearn.log_model(pipe, artifact_path="model")
+        mlflow.sklearn.log_model(pipe, artifact_path="model", serialization_format="cloudpickle")
         results.append({"run": name, "run_id": run.info.run_id, **m})
         pipes[name] = pipe
         print(f"done: {name}  val PR-AUC {m['val_pr_auc']:.3f}  test PR-AUC {m['test_pr_auc']:.3f}")
