@@ -1,0 +1,6 @@
+lateness_bucket,orders,avg_review,low_review_share
+early > 7d,70831,4.318,0.09
+early 0-7d,17124,4.201,0.102
+late 0-3d,2596,3.747,0.197
+late 3-7d,1786,2.305,0.616
+late > 7d,3224,1.728,0.784

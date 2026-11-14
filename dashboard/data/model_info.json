@@ -1,0 +1,31 @@
+{
+  "model": "logreg_C0.1",
+  "num_features": [
+    "estimated_days",
+    "n_items",
+    "n_sellers",
+    "items_value",
+    "freight_value",
+    "freight_ratio",
+    "weight_g",
+    "volume_cm3",
+    "distance_km",
+    "same_state",
+    "purchase_hour",
+    "purchase_dow",
+    "purchase_month_num"
+  ],
+  "cat_features": [
+    "customer_state",
+    "seller_state",
+    "category"
+  ],
+  "backtest_mean_lift": 2.546,
+  "test": {
+    "base_rate": 0.0621,
+    "pr_auc": 0.1278,
+    "lift": 2.0574,
+    "roc_auc": 0.7182,
+    "recall_top10": 0.2184
+  }
+}
