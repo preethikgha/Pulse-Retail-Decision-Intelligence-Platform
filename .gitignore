@@ -25,3 +25,6 @@ mlruns/
 .DS_Store
 
 .claude/
+
+mlflow.db
+mlartifacts/
