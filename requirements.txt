@@ -13,3 +13,4 @@ streamlit
 pytest
 matplotlib
 seaborn
+httpx
