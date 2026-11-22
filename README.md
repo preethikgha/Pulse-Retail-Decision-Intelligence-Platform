@@ -34,7 +34,6 @@ Both run on free tiers, so the first request after idle time can take several se
 - **Brazilian E-Commerce Public Dataset by Olist:** About 100k orders (2016–2018) across 9 related tables.
 - **Marketing A/B Testing:** 588,101 users, ad group vs PSA (control), with a conversion flag.
 
-I did not collect or generate any data, and I did not run the marketing experiment. I analyzed the public datasets.
 
 ## Key Findings
 
@@ -184,4 +183,4 @@ streamlit run dashboard/app.py
 
 ## Data Credit
 
-Olist Brazilian E-Commerce Public Dataset and Marketing A/B Testing dataset, both published on Kaggle. Check each dataset's licence before reusing the data.
+Olist Brazilian E-Commerce Public Dataset and Marketing A/B Testing dataset, both published on Kaggle.
