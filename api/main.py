@@ -5,6 +5,7 @@ from typing import Optional
 import joblib
 import pandas as pd
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, Field
 
 MODEL_DIR = Path(__file__).resolve().parent / "model"
@@ -35,6 +36,11 @@ class Order(BaseModel):
     customer_state: str = Field(..., min_length=2, max_length=2, description="e.g. RJ")
     seller_state: str = Field(..., min_length=2, max_length=2, description="e.g. SP")
     category: str = Field("unknown", description="English category name, e.g. bed_bath_table")
+
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse("/docs")
 
 
 @app.get("/health")
