@@ -168,18 +168,11 @@ python dashboard/export_data.py
 streamlit run dashboard/app.py
 ```
 
-## Limits and Honesty Notes
+## Honesty Notes
 
-- **The causal analysis is observational.** The effect of lateness on reviews is an adjusted association. Seller quality, damaged items and wrong items are not observed, so it does not prove causation.
-- **The RCA shows where lateness was, not why.** The data has no carrier, weather, capacity or holiday fields.
-- **Late rate depends on the promised date.** In Aug 2018 the late rate rose while delivery got faster, because the promised window shrank. Read it together with delivery days.
-- **A/B assignment is undocumented.** The intended split is unknown (96% ad, 4% PSA), and the day and hour mix differs between groups. A sample-ratio test is not possible, and CUPED does not apply because every covariate is measured after assignment. The memo treats the result as strong but unconfirmed.
-- **The model is modest.** About 2x lift over the base rate, using only purchase-time features. Use it to rank orders by risk, not as a certain prediction. Its first validation window was the Mar 2018 slowdown, which flipped the model ranking, so selection moved to a rolling backtest. Test results from the first training run were seen before that method was chosen.
-- **Small label leak in the backtest.** Orders purchased just before a cut-off have labels that finish after it.
-- **CI covers the API only.** The data-quality tests need the local DuckDB file, so they run locally.
-- **docker-compose runs the API only.** MLflow runs locally.
-- **The Vercel deployment runs the API code directly, not the Docker image.** The image is built and smoke-tested in CI and runs locally with docker compose. The endpoint is public with no login, and it holds no personal data.
-- Months with fewer than 100 orders (Sep 2016, Dec 2016, Sep–Oct 2018) are excluded from reporting.
+-**Causal claims are limited.** The review effect is an adjusted association from observational data, and the root-cause analysis shows where lateness happened, not why.
+- **The A/B result is unconfirmed.** Assignment and the intended split are undocumented, so treat it as strong evidence, not proof.
+- **The model is modest and the deployment is light.** About 2x lift over the base rate. CI covers the API only, and Vercel runs the API code directly, not the Docker image
 
 ## Data Credit
 
