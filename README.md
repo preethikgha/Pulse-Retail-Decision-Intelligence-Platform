@@ -170,7 +170,7 @@ streamlit run dashboard/app.py
 
 ## Honesty Notes
 
--**Causal claims are limited.** The review effect is an adjusted association from observational data, and the root-cause analysis shows where lateness happened, not why.
+- **Causal claims are limited.** The review effect is an adjusted association from observational data, and the root-cause analysis shows where lateness happened, not why.
 - **The A/B result is unconfirmed.** Assignment and the intended split are undocumented, so treat it as strong evidence, not proof.
 - **The model is modest and the deployment is light.** About 2x lift over the base rate. CI covers the API only, and Vercel runs the API code directly, not the Docker image
 
